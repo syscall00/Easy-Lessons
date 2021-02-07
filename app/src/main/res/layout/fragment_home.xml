@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="user"
+            type="String" />
+        <variable
+            name="upcomingList_size"
+            type="Integer" />
+        <variable
+            name="completedList_size"
+            type="Integer" />
+        <variable
+            name="deletedList_size"
+            type="Integer" />
+    </data>
+    <ScrollView
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.unito.ui.courses.CoursesFragment">
+
+
+    <TextView
+        android:id="@+id/welcome_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@{String.format(@string/welcome_login, user)}"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/welcomesub_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check_your_courses"
+        app:layout_constraintStart_toStartOf="@+id/welcome_label"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_label" />
+
+    <TextView
+        android:id="@+id/upcoming_courses_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/upcoming_lessons"
+        android:textColor="@color/secondaryDarkColor"
+        app:layout_constraintBottom_toTopOf="@+id/upcoming_cardview"
+        app:layout_constraintStart_toStartOf="@+id/upcoming_cardview" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/upcoming_cardview"
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:background="#25B8B4B4"
+        android:shadowColor="@android:color/transparent"
+
+        app:cardCornerRadius="20dp"
+        app:cardElevation="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_label">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#25B8B4B4"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_reserved"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/show_reserved_label"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_margin="5dp"
+                android:padding="0dp"
+                android:text="@string/show_items"
+                android:textColor="@color/primaryColor"
+                android:textStyle="bold"
+                android:visibility="@{upcomingList_size > 0 ? View.VISIBLE : View.GONE}"
+                app:layout_constraintEnd_toEndOf="@id/recycler_reserved"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/upcoming_cardview" />
+
+            <TextView
+                android:id="@+id/noUpcoming_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingVertical="30dp"
+                android:visibility="@{upcomingList_size > 0 ? View.GONE : View.VISIBLE}"
+                android:text="@string/no_items_cardView" />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/completed_lessons_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/completed_lessons"
+        android:textColor="@color/secondaryDarkColor"
+        app:layout_constraintBottom_toTopOf="@+id/completed_cardview"
+        app:layout_constraintStart_toStartOf="@+id/completed_cardview" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/completed_cardview"
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upcoming_cardview">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#25B8B4B4"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_completed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/noPassed_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingVertical="30dp"
+                android:text="@string/no_items_cardView"
+                android:visibility="@{completedList_size > 0 ? View.GONE : View.VISIBLE}" />
+
+            <TextView
+                android:id="@+id/show_completed_label"
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom|center"
+                android:layout_margin="5dp"
+                android:text="@string/show_items"
+                android:textColor="@color/primaryColor"
+                android:textStyle="bold"
+                android:visibility="@{completedList_size > 0 ? View.VISIBLE : View.GONE}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/completed_cardview" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/deleted_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/deleted_reservations"
+        android:textColor="@color/secondaryDarkColor"
+        app:layout_constraintBottom_toTopOf="@+id/deleted_cardview"
+        app:layout_constraintStart_toStartOf="@+id/deleted_cardview" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/deleted_cardview"
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="100dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/completed_cardview">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#25B8B4B4"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/deleted_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/noDeleted_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingVertical="30dp"
+                android:text="@string/no_items_cardView"
+                android:visibility="@{deletedList_size > 0 ? View.GONE : View.VISIBLE}" />
+
+            <TextView
+                android:id="@+id/show_deleted_label"
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom|center"
+                android:layout_margin="5dp"
+                android:text="@string/show_items"
+                android:textColor="@color/primaryColor"
+                android:textStyle="bold"
+                android:visibility="@{deletedList_size > 0 ? View.VISIBLE : View.GONE}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/deleted_cardview" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

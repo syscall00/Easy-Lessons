@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_dashboard">
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.unito.ui.home.HomeFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_navitagion_showAll"
+            app:destination="@id/navitagion_showAll" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navitagion_showAll"
+        android:name="com.unito.ui.home.ShowCoursesFragment"
+        android:label="@string/title_show_all"
+        tools:layout="@layout/fragment_show_courses" />
+
+    <fragment
+        android:id="@+id/navigation_courses"
+        android:name="com.unito.ui.courses.CoursesFragment"
+        android:label="@string/title_courses"
+        tools:layout="@layout/fragment_courses" >
+        <action
+            android:id="@+id/action_navigation_courses_to_navigation_tutor"
+            app:destination="@id/navigation_tutor" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_tutor"
+        android:name="com.unito.ui.courses.TutorFragment"
+        android:label="@string/title_tutor"
+        tools:layout="@layout/fragment_tutor" />
+</navigation>

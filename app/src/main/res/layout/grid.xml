@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        tools:layout_editor_absoluteX="-151dp"
+        tools:layout_editor_absoluteY="185dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/day0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:text="@string/day1_grid" />
+
+            <TextView
+                android:id="@+id/day1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/day2_grid" />
+
+            <TextView
+                android:id="@+id/day2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_gravity="center|center_vertical"
+                android:gravity="center"
+                android:text="@string/day3_grid" />
+
+            <TextView
+                android:id="@+id/day3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_gravity="center"
+                android:text="@string/day4_grid" />
+
+            <TextView
+                android:id="@+id/day4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/day5_grid" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/hour0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_span="1"
+                android:text="@string/h1_grid" />
+
+            <ImageView
+                android:id="@+id/slot0"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/slot1"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/slot2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/slot3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/slot4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+tools:ignore="ContentDescription" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/hour1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_span="1"
+                android:text="@string/h2_grid" />
+
+            <ImageView
+                android:id="@+id/slot5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/slot6"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/slot7"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/slot8"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/slot9"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+tools:ignore="ContentDescription" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/hour2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_span="1"
+                android:text="@string/h3_grid" />
+
+
+            <ImageView
+                android:id="@+id/slot10"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/slot11"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/slot12"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/slot13"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+tools:ignore="ContentDescription"/>
+
+            <ImageView
+                android:id="@+id/slot14"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+tools:ignore="ContentDescription" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/hour3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_span="1"
+                android:text="@string/h4_grid" />
+
+            <ImageView
+                android:id="@+id/slot15"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+tools:ignore="ContentDescription"/>
+
+            <ImageView
+                android:id="@+id/slot16"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/slot17"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/slot18"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/slot19"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+tools:ignore="ContentDescription" />
+
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

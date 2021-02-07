@@ -1,0 +1,109 @@
+<resources>
+
+    <!-- General purpose -->
+    <string name="app_name">Easy Lessons</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="search">Search</string>
+
+
+    <!-- Login activity -->
+    <string name="userpwd_label" translatable="false">Password</string>
+    <string name="userlogin_label" translatable="false">Username</string>
+    <string name="login_btn" translatable="false">Login</string>
+    <string name="password_forgot"><u>Forget password?</u></string>
+    <string name="remember_me">Remember me</string>
+    <string name="welcome_back_login">Welcome back,</string>
+    <string name="welcome_sublogin">Sign in to continue</string>
+    <string name="login_button" translatable="false">Log In</string>
+    <string name="signup_button">Sign Up</string>
+    <string name="check_your_courses">Check your courses</string>
+    <string name="not_implemented_function">Function not implemented yet</string>
+    <string name="wrong_login">Wrong username or password</string>
+
+
+    <!-- Logged activity -->
+    <string name="title_activity_logged">Easy Lessons</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_courses">Courses</string>
+    <string name="Logout">Logout</string>
+
+
+    <!-- Home fragment -->
+    <string name="welcome_login">Welcome, %s</string>
+    <string name="completed_lessons">Completed lessons</string>
+    <string name="upcoming_lessons">Upcoming lessons</string>
+    <string name="no_items_cardView">No items here</string>
+    <string name="show_items">Show all</string>
+    <string name="hide_description">This operation is irreversible. Confirm anyway?</string>
+    <string name="not_available_slot">This slot is not available</string>
+    <string name="you_sure">Are you sure?</string>
+    <string name="dialog_completed">Set reservation as completed</string>
+    <string name="dialog_deleted">Delete reservation</string>
+    <string name="dialog_reserved">Set as reserved</string>
+    <string name="dialog_remove">Remove reservation</string>
+
+    <!-- Tutor fragment -->
+    <string name="toast_wrong_selection">Wrong selection. Before select a slot.</string>
+    <string name="toast_alredy_reserved">Slot non disponibile. Please, select an available slot.</string>
+    <string name="title_show_all">All courses</string>
+    <string name="title_tutor">Tutor info</string>
+    <string name="deleted_reservations">Deleted reservations</string>
+    <string name="what_do_you_want_to_learn">What do you want to learn?</string>
+    <string name="reserve">Reserve</string>
+    <string name="complete">Complete</string>
+    <string name="delete">Delete</string>
+    <string name="set_as_reserved">Set as reserved</string>
+    <string name="hide">Hide</string>
+
+    <!-- GridSlotView -->
+    <string name="h1_grid" translatable="false">15:00</string>
+    <string name="h2_grid" translatable="false">16:00</string>
+    <string name="h3_grid" translatable="false">17:00</string>
+    <string name="h4_grid" translatable="false">18:00</string>
+    <string name="day1_grid">MON</string>
+    <string name="day2_grid">TUE</string>
+    <string name="day3_grid">WED</string>
+    <string name="day4_grid">THU</string>
+    <string name="day5_grid">FRI</string>
+
+    <!-- cd -->
+    <string name="cd_dropdown_menu">Dropdown Menu</string>
+    <string name="cd_user_image">User image</string>
+
+
+    <!-- Tutorial strings  -->
+    <string name="need_help">Need help?</string>
+
+    <string name="tap1_title">Here you can reserve your lessons</string>
+    <string name="tap1_description">Select a subject</string>
+
+    <string name="tap2_title">Reserve a lesson</string>
+    <string name="tap2_description">Tap on an available (light green) slot to activate it</string>
+
+    <string name="tap3_title">Reserve a lesson</string>
+    <string name="tap3_description">Once selected an available slot, you can reserve a lesson</string>
+
+    <string name="tap4_title">Reservation completed</string>
+    <string name="tap4_description">The lesson slot should appear red</string>
+
+    <string name="tap5_title">Set a lesson as completed</string>
+    <string name="tap5_description">If you already took part of a lesson, you can mark it as completed</string>
+
+    <string name="tap6_title">Lesson completed</string>
+    <string name="tap6_description">The lesson slot should appear dark green</string>
+
+    <string name="tap7_title">Go back</string>
+    <string name="tap7_description">If you marked a lesson as completed by mistake, you can go back and set it as reserved</string>
+
+    <string name="tap8_title">Reservation reset correctly</string>
+    <string name="tap8_description">If you reset a reservation, the slot should appear red again</string>
+
+    <string name="tap9_title">Delete a lesson</string>
+    <string name="tap9_description">"You can also delete a lesson "</string>
+
+    <string name="tap10_title">Cancellation completed</string>
+    <string name="tap10_description">The reservation will be available for everyone and the slot should appear light green</string>
+
+
+</resources>

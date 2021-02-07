@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="res"
+            type="com.unito.models.entity.Reservation" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/v"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.unito.ui.courses.TutorFragment">
+
+
+        <ImageView
+            android:id="@+id/userImage"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/user"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/cd_user_image" />
+
+        <TextView
+            android:id="@+id/tutorName_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text=""
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userImage" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:spinnerMode="dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/subjectselection_label"
+            />
+        <TextView
+            android:id="@+id/subjectselection_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/what_do_you_want_to_learn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tutorName_label" />
+
+        <LinearLayout
+            android:id="@+id/gridContainer"
+            android:layout_width="328dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner"
+            app:layout_constraintVertical_bias="0.202">
+
+
+            <com.unito.ui.view.GridSlotView
+                android:id="@+id/slotHour"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/reserveButton"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:text="@string/reserve"
+            android:textAllCaps="true"
+            android:visibility="@{res.isFree() ? View.VISIBLE : View.GONE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gridContainer" />
+
+        <Button
+            android:id="@+id/completeButton"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:text="@string/complete"
+            android:textAllCaps="true"
+            android:visibility="@{res.isReserved() ? View.VISIBLE : View.GONE}"
+            app:layout_constraintStart_toStartOf="@+id/gridContainer"
+            app:layout_constraintTop_toBottomOf="@+id/gridContainer" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="82dp"
+            android:layout_marginTop="52dp"
+            android:text="@string/delete"
+            android:textAllCaps="true"
+            android:visibility="@{res.isReserved() ? View.VISIBLE : View.GONE}"
+            app:layout_constraintEnd_toEndOf="@+id/gridContainer"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/completeButton"
+            app:layout_constraintTop_toBottomOf="@+id/gridContainer" />
+
+
+        <Button
+            android:id="@+id/backToReserved"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:text="@string/set_as_reserved"
+            android:textAllCaps="true"
+            android:visibility="@{res.isCompleted() ? View.VISIBLE : View.GONE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gridContainer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
